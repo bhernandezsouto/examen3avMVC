@@ -7,23 +7,20 @@ import java.util.Scanner;
  *
  * @author damian
  */
-public class Superficies {
+public class Controlador {
 
-    private static Scanner sc;
+    static Modelo mod = new Modelo();
+    static Presentacion pre = new Presentacion();
 
+        
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        String shapeType;
+        
+        pre.escogerArea(mod);
 
-        sc = new Scanner(System.in);
-
-        System.out.println("What shape would you like to find the area of? (square, circle, triangle, rectangle):");
-        shapeType = sc.nextLine();
-        System.out.println("You said: " + shapeType);
-
-        if (shapeType.equals("square")) {
+        if (mod.shapeType.equals("square")) {
             //add area calculations for square
             float squareArea;
             float sideLength;
