@@ -11,4 +11,7 @@ package superficies;
  */
 public class Modelo {
     String shapeType;
+    float varA; //dato de la figura 
+    float varB; //dato de la figura
+    float varArea; //area calculada
 }
