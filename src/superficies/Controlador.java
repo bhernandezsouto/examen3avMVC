@@ -4,17 +4,19 @@ import java.util.Scanner;
 
 /**
  * Examen de MVC 3ª Avaliación
- *
- * @author damian
+ * Clase main contiene toda la logica del programa
+ * @author bea
  */
 public class Controlador {
-    
-    
-    
+
+    // objetos utilisados para el acceso a metodos y guardar los datos.
     static Modelo mod = new Modelo();
     static Presentacion pre = new Presentacion();
 
     /**
+     * el metodo main se encarga de llamar a todos los metodos necesarios para
+     * hacer el calculo del area de las figuras establecidas.
+     *
      * @param args the command line arguments
      */
     public static void main(String[] args) {
@@ -38,6 +40,9 @@ public class Controlador {
 
     }
 
+    /**
+     * Metodo que calcula el area del circulo.
+     */
     private static void areaCircle() {
         //add area calculations for a circle here
         pre.datosCircle(mod);
@@ -46,6 +51,9 @@ public class Controlador {
         pre.imprimirArea(mod);
     }
 
+    /**
+     * Metodo que calcula el area del triangulo.
+     */
     private static void areaTriangle() {
         //add area calculations for triangle here
         pre.datosTriangle(mod);
@@ -53,6 +61,9 @@ public class Controlador {
         pre.imprimirArea(mod);
     }
 
+    /**
+     * Metodo que calcula el area del rectangulo.
+     */
     private static void areaRectangle() {
         //add area calculations for rectangle here
         pre.datosRectangle(mod);
@@ -60,6 +71,9 @@ public class Controlador {
         pre.imprimirArea(mod);
     }
 
+    /**
+     * Metodo que calcula el area del cuadrado.
+     */
     private static void areaSquare() {
         //add area calculations for square
         pre.datosSquare(mod);

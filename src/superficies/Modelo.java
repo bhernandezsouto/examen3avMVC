@@ -6,12 +6,15 @@
 package superficies;
 
 /**
+ * Esta clase contiene todo lo relacionado con los datos necesarios para el
+ * programa
  *
  * @author Bea
  */
 public class Modelo {
-    String shapeType;
-    float varA; //dato de la figura 
+
+    String shapeType; // indica que figura escoge el usuario
+    float varA; //dato de la figura
     float varB; //dato de la figura
     float varArea; //area calculada
 }
