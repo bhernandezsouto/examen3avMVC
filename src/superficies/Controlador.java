@@ -9,10 +9,6 @@ import java.util.Scanner;
  */
 public class Controlador {
 
-    // objetos utilisados para el acceso a metodos y guardar los datos.
-    static Modelo mod = new Modelo();
-    static Presentacion pre = new Presentacion();
-
     /**
      * el metodo main se encarga de llamar a todos los metodos necesarios para
      * hacer el calculo del area de las figuras establecidas.
@@ -20,18 +16,18 @@ public class Controlador {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-
+        Modelo mod = new Modelo();
+        Presentacion pre = new Presentacion();
         pre.escogerArea(mod);
 
         if (mod.shapeType.equals("square")) {
-            areaSquare();
+            areaSquare(mod,pre);
         } else if (mod.shapeType.equals("rectangle")) {
-            areaRectangle();
+            areaRectangle(mod,pre);
         } else if (mod.shapeType.equals("triangle")) {
-            areaTriangle();
-
+            areaTriangle(mod,pre);
         } else if (mod.shapeType.equals("circle")) {
-            areaCircle();
+            areaCircle(mod,pre);
         } else {
             mod.shapeType = "";
             System.out.println("You have to enter the name of the geometric figures indicated in lowercase .\n"
@@ -43,7 +39,7 @@ public class Controlador {
     /**
      * Metodo que calcula el area del circulo.
      */
-    private static void areaCircle() {
+    private static void areaCircle(Modelo mod, Presentacion pre) {
         //add area calculations for a circle here
         pre.datosCircle(mod);
         mod.varArea = mod.varA * mod.varA;
@@ -54,7 +50,7 @@ public class Controlador {
     /**
      * Metodo que calcula el area del triangulo.
      */
-    private static void areaTriangle() {
+    private static void areaTriangle(Modelo mod, Presentacion pre) {
         //add area calculations for triangle here
         pre.datosTriangle(mod);
         mod.varArea = (float) (0.5 * mod.varA * mod.varB);
@@ -64,7 +60,7 @@ public class Controlador {
     /**
      * Metodo que calcula el area del rectangulo.
      */
-    private static void areaRectangle() {
+    private static void areaRectangle(Modelo mod, Presentacion pre) {
         //add area calculations for rectangle here
         pre.datosRectangle(mod);
         mod.varArea = mod.varA * mod.varB;
@@ -74,7 +70,7 @@ public class Controlador {
     /**
      * Metodo que calcula el area del cuadrado.
      */
-    private static void areaSquare() {
+    private static void areaSquare(Modelo mod, Presentacion pre) {
         //add area calculations for square
         pre.datosSquare(mod);
         mod.varArea = mod.varA * mod.varA;
