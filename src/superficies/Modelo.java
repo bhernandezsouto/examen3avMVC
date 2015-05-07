@@ -7,7 +7,7 @@ package superficies;
 
 /**
  * Esta clase contiene todo lo relacionado con los datos necesarios para el
- * programa
+ * programa.
  *
  * @author Bea
  */
